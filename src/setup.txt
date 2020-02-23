@@ -1,0 +1,37 @@
+Setup:
+
+#assuming the server is an ubuntu instance.
+
+
+############################################################
+steps:
+
+1) Install python3.6
+
+sudo add-apt-repository ppa:jonathonf/python-3.6
+
+sudo apt-get update
+
+sudo apt-get install python3.6
+
+############################################################
+2) Create python virtual env
+
+sudo pip3 install virtualenv
+
+virtualenv -p /usr/bin/python3.6 homecanvas
+
+###############################################################
+4) Activate homecanvas virtual environment and install dependencies
+
+source homecanvas/bin/activate
+
+pip -r homecanvas_delivery/requirements.txt
+
+###############################################################
+
+5) Run code:
+
+source homecanvas/bin/activate
+
+python driver.py <input_image_folder> <output_folder>
